@@ -1,0 +1,236 @@
+--DONT STEAL GRRR LOFI IS HOT
+task.wait()
+game.StarterGui:SetCore("SendNotification", {
+Title = "LofiOnTop"; 
+Text = "Made By Lofi"; 
+Icon = "rbxassetid://510921874"; 
+Duration = 8;
+})
+task.wait()
+game:GetService("UserInputService").MouseIconEnabled = true
+game:GetService("UserInputService").MouseBehavior = Enum.MouseBehavior.Default
+task.wait()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("DaddyLofi<3", "BloodTheme")
+local AFeatures = Window:NewTab("Auto-Mode")
+local AutoFeatures = AFeatures:NewSection("MeowForLofi")
+local BFeatures = Window:NewTab("Inf-Mode")
+local InfFeatures = BFeatures:NewSection("MeowForLofi")
+local CFeatures = Window:NewTab("Auto-Style")
+local StyleFeatures = CFeatures:NewSection("MeowForLofi")
+local DFeatures = Window:NewTab("Misc")
+local Misc = DFeatures:NewSection("MeowForLofi")
+--Sung
+InfFeatures:NewButton("InfSung", "InfSung", function()
+local Tool = game:GetService("Players").LocalPlayer.Backpack["Shadow Sovereign Form"]
+for i,v in next, game.Players.LocalPlayer.Backpack:GetChildren() do
+    if v.name == "Shadow Sovereign Form" then
+        task.wait()
+        game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+        task.wait()
+        Tool:Activate()
+        task.wait(8.5)
+        Tool:Destroy()
+end
+end
+end)
+--Songoku
+InfFeatures:NewButton("InfSongoku", "InfSongoku", function()
+        local Tool = game:GetService("Players").LocalPlayer.Backpack["Ultra Instinct"]
+for i,v in next, game.Players.LocalPlayer.Backpack:GetChildren() do
+    if v.name == "Ultra Instinct" then
+        task.wait()
+        game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+        task.wait()
+        Tool:Activate()
+        task.wait(10.9)
+        Tool:Destroy()
+end
+end
+end)
+--Kagu
+InfFeatures:NewButton("InfKagu", "InfKagu", function()
+        local Tool = game:GetService("Players").LocalPlayer.Backpack["Fire God Form"]
+for i,v in next, game.Players.LocalPlayer.Backpack:GetChildren() do
+    for i=1, 1 do
+    if v.name == "Fire God Form" then
+        task.wait()
+        game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+        task.wait()
+        Tool:Activate()
+        task.wait(4)
+        Tool:Destroy()
+        task.wait(2)
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer("SpecialTrainer","Kagutsuchi")
+
+        end
+    end
+end
+end)
+--Gyakusatsu
+InfFeatures:NewButton("InfGya", "InfGya", function()
+    local Tool = game:GetService("Players").LocalPlayer.Backpack["Carnage"]
+for i,v in next, game.Players.LocalPlayer.Backpack:GetChildren() do
+if v.name == "Carnage" then
+    task.wait()
+    game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+    task.wait()
+    Tool:Activate()
+    task.wait(5)
+    Tool:Destroy()
+end
+end
+end)
+--Ohma
+InfFeatures:NewButton("InfOhma", "InfOhma", function()
+        local Tool = game:GetService("Players").LocalPlayer.Backpack["Full Advance"]
+for i,v in next, game.Players.LocalPlayer.Backpack:GetChildren() do
+    if v.name == "Full Advance" then
+        task.wait()
+        game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+        task.wait()
+        Tool:Activate()
+        task.wait(15)
+        Tool:Destroy()
+end
+end
+end)
+--SongokuMode
+AutoFeatures:NewButton("AutoSongokuMode", "AutoSongokuMode", function()
+
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer("SpecialTrainer","Songoku")
+end)
+--SungMode
+AutoFeatures:NewButton("AutoSungMode", "AutoSungMode", function()
+
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer("SpecialTrainer","Sung")
+end)
+--RyuMode
+AutoFeatures:NewButton("AutoRyuSkill", "AutoRyuSkill", function()
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer("SpecialTrainer","Ryu")
+end)
+
+
+--KaguMode
+AutoFeatures:NewButton("AutoKaguMode", "AutoKaguMode", function()
+
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer("SpecialTrainer","Kagutsuchi")
+end)
+--GyakatsuMode
+AutoFeatures:NewButton("AutoGyakusatsuMode", "AutoGyakusatsuMode", function()
+
+    game:GetService("ReplicatedStorage").RemoteEvent:FireServer("SpecialTrainer","Gyakusatsu")
+end)
+--OhmaMode
+AutoFeatures:NewButton("AutoOhmaMode", "AutoOhmaMode", function()
+
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer("SpecialTrainer","Ohma")
+end)
+--Hitman
+StyleFeatures:NewButton("Hitman", "Hitman(NeedsStyleReset)", function()
+    game:GetService("ReplicatedStorage").RemoteEvent:FireServer("Trainer","Boxing")	
+    task.wait()	
+    game:GetService("ReplicatedStorage").RemoteEvent:FireServer("SpecialTrainer","Hitman")
+end)
+--Formless
+StyleFeatures:NewButton("Formless(Warning Instant)", "Formless(Doesn'tNeedStyleReset)", function()
+    game:GetService("ReplicatedStorage").RemoteEvent:FireServer("SpecialTrainer","Formless")
+
+
+end)
+--Beast
+StyleFeatures:NewButton("Beast(Warning Instant)", "Beast(Doesn'tNeedStyleReset)", function()
+    game:GetService("ReplicatedStorage").RemoteEvent:FireServer("SpecialTrainer","Beast")
+end)
+--RemoveMusic
+AutoFeatures:NewButton("RemoveMusic", "RemovesMusic", function()
+game:GetService("Workspace").Soundtrack:Destroy()
+end)
+
+--Beast
+Misc:NewButton("Beast(Slam/Stuck)", "", function()
+    local Tool = game:GetService("Players").LocalPlayer.Backpack["Ground Quake"]
+while wait() do
+Tool.Activated:Connect(function()
+    task.wait(1)
+        Tool:Destroy()
+
+end)
+end
+end)
+--Beast
+Misc:NewButton("Lightning(Stuck)", "", function()
+	local Tool = game:GetService("Players").LocalPlayer.Backpack["Lightning Strike"]
+
+	Tool.Activated:Connect(function()
+		task.wait()
+		
+	Tool:Destroy()
+		task.wait(2)
+	end)
+
+end)
+--Form
+Misc:NewButton("Destruction(Stuck)", "", function()
+local Tool = game:GetService("Players").LocalPlayer.Backpack.Destruction
+
+Tool.Activated:Connect(function()
+    wait(0.5)
+    
+Tool:Destroy()
+    wait(2)
+    game:GetService("ReplicatedStorage").RemoteEvent:FireServer("SpecialTrainer","Formless")
+end)
+end)
+
+
+--Form
+Misc:NewButton("ChiBlast (Stuck)", "", function()
+    local Tool = game:GetService("Players").LocalPlayer.Backpack["Chi Blast"]
+    
+    Tool.Activated:Connect(function()
+        wait(0.8)
+        
+    Tool:Destroy()
+        wait(2)
+       
+    end)
+    end)
+    
+--Carry
+Misc:NewButton("CarryStuck(Keybind:Z)", "", function()
+    local uis = game:GetService("UserInputService")
+    local keybind = Enum.KeyCode.Z
+    
+    local isCarrying = false
+    
+    function InputBegan(input)
+        if input.KeyCode == keybind and not isCarrying then
+           local LP = game.Players.LocalPlayer LP.Character:FindFirstChild("Carrying"):Destroy() LP.Character:FindFirstChildOfClass("WeldConstraint"):Destroy()
+           isCarrying = true 
+               wait(3)
+               local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+    local ActiveTracks = Humanoid:GetPlayingAnimationTracks()
+    for _,v in pairs(ActiveTracks) do
+        v:Stop()
+    end
+        end
+    end
+    
+    function InputEnded(input)
+        if input.KeyCode == keybind and isCarrying then
+           local LP = game.Players.LocalPlayer LP.Character:FindFirstChild("Carrying"):Destroy() LP.Character:FindFirstChildOfClass("WeldConstraint"):Destroy()
+           isCarrying = false 
+           wait(3)
+           local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+    local ActiveTracks = Humanoid:GetPlayingAnimationTracks()
+    for _,v in pairs(ActiveTracks) do
+        v:Stop()
+    end
+        end
+    end
+    
+    uis.InputBegan:Connect(InputBegan)
+    uis.InputEnded:Connect(InputEnded)
+    
+end)    
